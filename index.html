@@ -7,11 +7,26 @@
     <script src="https://kit.fontawesome.com/54c8c90fcc.js"crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <script>
-
+        tailwind.config = {
+            theme: {
+                extend:{
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes:{
+                        'infinite-scroll':{
+                            from:{transform:'translateX(0)'},
+                            to:{transform:'translateX(-100%)'},
+                        }
+                    }
+                }
+            }
+            
+        }
     </script>
     <title>Dribbble</title>
 </head>
-<body class="bg-[#f8f7f4]">
+<body class="bg-[#f8f7f4] overflow-x-clip">
     <header>
         <nav class="p-6 w-screen h-[90px] flex justify-between items-center">
             <div>
@@ -43,16 +58,36 @@
         <div class="flex justify-center items-center"><a href=""><p class="bg-black border-[20px] mt-4 border-black text-white rounded-full hover:opacity-[0.7]">Get started</p></a></div>
     </section>
     <section>
-        <div class="mt-6 flex justify-center items-center">
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-1.png" alt="img-1"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-2.jpg" alt="img-2"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-3.png" alt="img-3"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-4.png" alt="img-4"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-5.png" alt="img-5"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-6.jpg" alt="img-6"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-7.jpg" alt="img-7"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-8.png" alt="img-8"></div>
-            <div><img class="w-[220px] h-[180px] ml-4" src="assets/img-9.jpg" alt="img-9"></div>
+        <div class="mt-6 flex">
+            <ul class="flex items-center justify-center animate-infinite-scroll">
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign1.avif" alt="img-1">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign2.avif" alt="img-2">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign3.avif" alt="img-3">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign4.avif" alt="img-4">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign5.avif" alt="img-5">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign6.avif" alt="img-6">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign7.avif" alt="img-7">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign8.avif" alt="img-8">
+                </li>
+                <li>
+                    <img class="w-[800px] h-[300px] px-6 rounded-full" src="assets/fotoDesign9.avif" alt="img-9">
+                </li>
+            </ul>
         </div>
     </section>
     <section>
@@ -109,38 +144,38 @@
         </div>
     </section>
     <section>
-        <div class="mt-6 flex justify-center items-center">
+        <div class="mt-6 flex justify-center items-center animate-infinite-scroll">
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-1.webp" alt="img-1">
-                <p class="ml-6">Web Design</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2 hover:animate-none" src="assets/Foto Section prima footer-1.webp" alt="img-1">
+                <p class="ml-6">Web Design</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-2.webp" alt="img-2">
-                <p class="ml-6">Illustration</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-2.webp" alt="img-2">
+                <p class="ml-6">Illustration</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-3.webp" alt="img-3">
-                <p class="ml-6">Branding</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-3.webp" alt="img-3">
+                <p class="ml-6">Branding</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-4.webp" alt="img-4">
-                <p class="ml-6">Mobile</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-4.webp" alt="img-4">
+                <p class="ml-6">Mobile</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-5.webp" alt="img-5">
-                <p class="ml-6">Print</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-5.webp" alt="img-5">
+                <p class="ml-6">Print</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-6.webp" alt="img-6">
-                <p class="ml-6">Typography</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-6.webp" alt="img-6">
+                <p class="ml-6">Typography</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-7.webp" alt="img-7">
-                <p class="ml-6">Animation</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-7.webp" alt="img-7">
+                <p class="ml-6">Animation</p></a>
             </div>
             <div>
-                <img class="w-[320px] h-[100px] ml-4 p-2" src="assets/Foto Section prima footer-8.webp" alt="img-8">
-                <p class="ml-6">Product Design</p>
+                <a href=""><img class="w-[620px] h-[200px] ml-4 p-2" src="assets/Foto Section prima footer-8.webp" alt="img-8">
+                <p class="ml-4">Product Design</p></a>
             </div>
         </div>
     </section>
